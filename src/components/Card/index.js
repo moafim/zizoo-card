@@ -1,5 +1,7 @@
 import React from "react";
+import numeral from "numeral";
 import heartIcon from "../../assets/icon/heart/heart.svg";
+import helpIcon from "../../assets/icon/help/help-material.svg";
 import starsIcon from "../../assets/icon/stars/stars.svg";
 
 import "./style.css";
@@ -16,7 +18,10 @@ function Card(props) {
     reviewCount,
     length,
     cabin,
-    guest
+    guest,
+    price,
+    period,
+    currency
   } = props;
   return (
     <div className="wrapper">
@@ -62,8 +67,17 @@ function Card(props) {
         <span className="key">{`${reviewCount} reviews`}</span>
       </div>
       <div className="descWrapper">desc</div>
-      <div className="priceWrapper">price</div>
-      <div className="bookingWrapper">booking</div>
+      <div className="priceWrapper center">
+        <div className="priceContainer">
+          <span className="key">from</span>
+          <span className="price">{`${currency}${numeral(price).format(
+            "0,0.00"
+          )}`}</span>
+          <span className="period">{period}</span>
+          <img src={helpIcon} alt="Stars" />
+        </div>
+      </div>
+      <div className="bookingWrapper center">booking</div>
     </div>
   );
 }

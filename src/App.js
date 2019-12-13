@@ -14,6 +14,9 @@ function App() {
         length={12.04}
         cabin={4}
         guest={10}
+        currency="€"
+        price={1083.0}
+        period="weekly"
         image={boatImage}
         title="Jeannau Sun Odyssey 45.2"
         year="2011"

@@ -188,6 +188,31 @@
     grid-row: 3 / 4;
     background-color: var(--white);
   }
+
+  .priceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 10px;
+  }
+
+  .price {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    padding: 0 4px 0 10px;
+  }
+
+  .period {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 0.24px;
+    margin-right: 16px;
+  }
+
   .bookingWrapper {
     grid-column: 5 / 7;
     grid-row: 4 / 5;
