@@ -7,6 +7,9 @@ function App() {
   return (
     <div className="App">
       <Card
+        recommend
+        hot
+        count={69}
         image={boatImage}
         title="Jeannau Sun Odyssey 45.2"
         year="2011"
