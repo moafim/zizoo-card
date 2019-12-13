@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="191" height="32" viewBox="0 0 191 32">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#DE6449">
+            <path d="M7 0h175v32H7zM182 0h2l7 16.022L184 32h-2z"/>
+            <path d="M0 0h7.5v32H0l7-15.978z"/>
+        </g>
+        <text fill="#FFF" font-family="OpenSans-Bold, Open Sans" font-size="16" font-weight="bold">
+            <tspan x="41" y="23">VIEW DETAILS</tspan>
+        </text>
+    </g>
+</svg>

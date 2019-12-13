@@ -232,6 +232,10 @@
     margin-bottom: 6px;
   }
 
+  .check {
+    padding-right: 2px;
+  }
+
   .priceContainer {
     display: flex;
     flex-direction: row;
@@ -260,5 +264,12 @@
     grid-column: 5 / 7;
     grid-row: 4 / 5;
     background-color: var(--white);
+  }
+
+  .booking {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 2px;
   }
 }

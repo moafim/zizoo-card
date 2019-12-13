@@ -1,9 +1,11 @@
 import React from "react";
 import numeral from "numeral";
 import heartIcon from "../../assets/icon/heart/heart.svg";
-import helpIcon from "../../assets/icon/help/help-material.svg";
-import starsIcon from "../../assets/icon/stars/stars.svg";
-import checkIcon from "../../assets/icon/check/check-material.svg";
+import helpIcon from "../../assets/icon/help/help-material.png";
+import starsIcon from "../../assets/icon/stars/stars.png";
+import checkIcon from "../../assets/icon/check/check-material.png";
+import flashIcon from "../../assets/icon/flash/flash-on-material.png";
+import ribbonImage from "../../assets/icon/ribbon/ribbon.svg";
 
 import "./style.css";
 
@@ -26,7 +28,7 @@ function Card(props) {
     tags,
     saleType,
     extras,
-    bookType
+    directBook
   } = props;
   return (
     <div className="wrapper">
@@ -75,7 +77,7 @@ function Card(props) {
         <div className="tagContainer">
           {tags.map((item, index) => (
             <span className="tag" key={`tag_${index}`}>
-              <img src={checkIcon} alt="Stars" />
+              <img className="check" src={checkIcon} alt="check" />
               {item}
             </span>
           ))}
@@ -96,10 +98,19 @@ function Card(props) {
             "0,0.00"
           )}`}</span>
           <span className="period">{period}</span>
-          <img src={helpIcon} alt="Stars" />
+          <img src={helpIcon} alt="help" />
         </div>
       </div>
-      <div className="bookingWrapper center">booking</div>
+      <div className="bookingWrapper center">
+        {directBook && (
+          <div className="row">
+            <img src={flashIcon} alt="flash" />
+            <span className="booking">direct booking</span>
+          </div>
+        )}
+
+        <img src={ribbonImage} alt="View Detail" />
+      </div>
     </div>
   );
 }

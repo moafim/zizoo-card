@@ -24,6 +24,7 @@ function App() {
         tags={["Sicherungsshein", "Luxury"]}
         extras={"AirCon, WiFi, Very Long Extra Description"}
         saleType="Rolling Mainsail"
+        directBook
       />
     </div>
   );
