@@ -9,7 +9,11 @@ function App() {
       <Card
         recommend
         hot
-        count={69}
+        viewCount={69}
+        reviewCount={3}
+        length={12.04}
+        cabin={4}
+        guest={10}
         image={boatImage}
         title="Jeannau Sun Odyssey 45.2"
         year="2011"

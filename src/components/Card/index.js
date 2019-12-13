@@ -1,10 +1,23 @@
 import React from "react";
 import heartIcon from "../../assets/icon/heart/heart.svg";
+import starsIcon from "../../assets/icon/stars/stars.svg";
 
 import "./style.css";
 
 function Card(props) {
-  const { image, recommend, title, year, location, hot, count } = props;
+  const {
+    image,
+    recommend,
+    title,
+    year,
+    location,
+    hot,
+    viewCount,
+    reviewCount,
+    length,
+    cabin,
+    guest
+  } = props;
   return (
     <div className="wrapper">
       <div className="imageWrapper">
@@ -23,19 +36,31 @@ function Card(props) {
           <img src={heartIcon} alt="Favorite" />
         </div>
       </div>
-      <div className="viewWrapper">
+      <div className="viewWrapper center">
         <div className="viewContainer">
           <div className="viewCount">
             {hot && <span className="viewHot">hot</span>}
-            <span>{`${count} view${count > 1 && "s"}`}</span>
+            <span>{`${viewCount} view${viewCount > 1 && "s"}`}</span>
           </div>
           <span className="viewDesc">in the last 24 hours</span>
         </div>
       </div>
-      <div className="lengthWrapper">length</div>
-      <div className="cabinWrapper">cabin</div>
-      <div className="guestWrapper">guest</div>
-      <div className="reviewWrapper">review</div>
+      <div className="lengthWrapper center">
+        <span className="value">{`${length}m`}</span>
+        <span className="key">length</span>
+      </div>
+      <div className="cabinWrapper center">
+        <span className="value">{cabin}</span>
+        <span className="key">cabins</span>
+      </div>
+      <div className="guestWrapper center">
+        <span className="value">{guest}</span>
+        <span className="key">guests</span>
+      </div>
+      <div className="reviewWrapper center">
+        <img src={starsIcon} alt="Stars" />
+        <span className="key">{`${reviewCount} reviews`}</span>
+      </div>
       <div className="descWrapper">desc</div>
       <div className="priceWrapper">price</div>
       <div className="bookingWrapper">booking</div>

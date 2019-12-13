@@ -97,11 +97,6 @@
     grid-row: 1 / 2;
     background-color: var(--silver);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     color: var(--pale-red);
     font-size: 11px;
     font-weight: bold;
@@ -137,6 +132,14 @@
     line-height: 13px;
   }
 
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
   .lengthWrapper {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -152,6 +155,24 @@
     grid-row: 2 / 3;
     background-color: var(--white);
   }
+
+  .key {
+    color: var(--charcoal-grey);
+    text-align: center;
+    font-size: 10px;
+    line-height: 16px;
+    opacity: 44%;
+    text-transform: uppercase;
+  }
+
+  .value {
+    color: var(--charcoal-grey);
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+  }
+
   .reviewWrapper {
     grid-column: 5 / 7;
     grid-row: 2 / 3;
