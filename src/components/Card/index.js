@@ -3,6 +3,7 @@ import numeral from "numeral";
 import heartIcon from "../../assets/icon/heart/heart.svg";
 import helpIcon from "../../assets/icon/help/help-material.svg";
 import starsIcon from "../../assets/icon/stars/stars.svg";
+import checkIcon from "../../assets/icon/check/check-material.svg";
 
 import "./style.css";
 
@@ -21,7 +22,11 @@ function Card(props) {
     guest,
     price,
     period,
-    currency
+    currency,
+    tags,
+    saleType,
+    extras,
+    bookType
   } = props;
   return (
     <div className="wrapper">
@@ -66,7 +71,24 @@ function Card(props) {
         <img src={starsIcon} alt="Stars" />
         <span className="key">{`${reviewCount} reviews`}</span>
       </div>
-      <div className="descWrapper">desc</div>
+      <div className="descWrapper">
+        <div className="tagContainer">
+          {tags.map((item, index) => (
+            <span className="tag" key={`tag_${index}`}>
+              <img src={checkIcon} alt="Stars" />
+              {item}
+            </span>
+          ))}
+        </div>
+        <div className="row">
+          <span className="keyRow">sale type</span>
+          <span className="descRow">{saleType}</span>
+        </div>
+        <div className="row">
+          <span className="keyRow">free extras</span>
+          <span className="descRow">{extras}</span>
+        </div>
+      </div>
       <div className="priceWrapper center">
         <div className="priceContainer">
           <span className="key">from</span>
