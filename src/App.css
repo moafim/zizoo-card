@@ -1,3 +1,10 @@
 .App {
   background-color: white;
 }
+
+html {
+  --white: #ffffff;
+  --silver: #f8f8f8;
+  --pinkish-grey: #cac9c9;
+  --charcoal-grey: #363e40;
+}
