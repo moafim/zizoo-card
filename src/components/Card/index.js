@@ -41,6 +41,7 @@ function Card(props) {
           <div className="titleYear">
             <span className="title">{title}</span>
             <span className="year">{year}</span>
+            <span className="location2">{location}</span>
           </div>
           <span className="location">{location}</span>
         </div>
@@ -54,7 +55,7 @@ function Card(props) {
             {hot && <span className="viewHot">hot</span>}
             <span>{`${viewCount} view${viewCount > 1 && "s"}`}</span>
           </div>
-          <span className="viewDesc">in the last 24 hours</span>
+          <span className="viewDesc">in last 24 hours</span>
         </div>
       </div>
       <div className="lengthWrapper center">
@@ -91,9 +92,10 @@ function Card(props) {
           <span className="descRow">{extras}</span>
         </div>
       </div>
-      <div className="priceWrapper center">
+      <div className="priceWrapper">
+        <span className="key mobile">from</span>
         <div className="priceContainer">
-          <span className="key">from</span>
+          <span className="screen key">from</span>
           <span className="price">{`${currency}${numeral(price).format(
             "0,0.00"
           )}`}</span>
@@ -103,13 +105,12 @@ function Card(props) {
       </div>
       <div className="bookingWrapper center">
         {directBook && (
-          <div className="row">
+          <div className="Bookrow">
             <img src={flashIcon} alt="flash" />
             <span className="booking">direct booking</span>
           </div>
         )}
-
-        <img src={ribbonImage} alt="View Detail" />
+        <img className="bookingBtn" src={ribbonImage} alt="View Detail" />
       </div>
     </div>
   );
