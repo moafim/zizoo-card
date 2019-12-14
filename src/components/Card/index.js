@@ -117,12 +117,12 @@ function Card(props) {
   );
 }
 
-Card.PropTypes = {
-  image: PropTypes.string,
+Card.propTypes = {
+  image: PropTypes.object,
   recommend: PropTypes.bool,
   title: PropTypes.string,
   year: PropTypes.number,
-  location: PropTypes.location,
+  location: PropTypes.string,
   hot: PropTypes.bool,
   viewCount: PropTypes.number,
   reviewCount: PropTypes.number,
