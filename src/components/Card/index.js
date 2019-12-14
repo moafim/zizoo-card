@@ -118,7 +118,7 @@ function Card(props) {
 }
 
 Card.propTypes = {
-  image: PropTypes.object,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   recommend: PropTypes.bool,
   title: PropTypes.string,
   year: PropTypes.number,
