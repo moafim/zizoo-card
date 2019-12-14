@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import numeral from "numeral";
 import heartIcon from "../../assets/icon/heart/heart.svg";
 import helpIcon from "../../assets/icon/help/help-material.png";
@@ -115,5 +116,26 @@ function Card(props) {
     </div>
   );
 }
+
+Card.PropTypes = {
+  image: PropTypes.string,
+  recommend: PropTypes.bool,
+  title: PropTypes.string,
+  year: PropTypes.number,
+  location: PropTypes.location,
+  hot: PropTypes.bool,
+  viewCount: PropTypes.number,
+  reviewCount: PropTypes.number,
+  length: PropTypes.number,
+  cabin: PropTypes.number,
+  guest: PropTypes.number,
+  price: PropTypes.number,
+  period: PropTypes.string,
+  currency: PropTypes.number,
+  tags: PropTypes.array,
+  saleType: PropTypes.number,
+  extras: PropTypes.string,
+  directBook: PropTypes.bool
+};
 
 export default Card;
