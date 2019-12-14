@@ -131,9 +131,9 @@ Card.propTypes = {
   guest: PropTypes.number,
   price: PropTypes.number,
   period: PropTypes.string,
-  currency: PropTypes.number,
+  currency: PropTypes.string,
   tags: PropTypes.array,
-  saleType: PropTypes.number,
+  saleType: PropTypes.string,
   extras: PropTypes.string,
   directBook: PropTypes.bool
 };

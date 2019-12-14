@@ -19,7 +19,7 @@ function App() {
         period="weekly"
         image={boatImage}
         title="Jeannau Sun Odyssey 45.2"
-        year="2011"
+        year={2011}
         location="Split, Croatia"
         tags={["Sicherungsshein", "Luxury"]}
         extras={"AirCon, WiFi, Very Long Extra Description"}
